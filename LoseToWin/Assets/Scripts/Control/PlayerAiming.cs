@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aiming : MonoBehaviour
+public class PlayerAiming : MonoBehaviour
 {
     // Update is called once per frame
     void Update()
