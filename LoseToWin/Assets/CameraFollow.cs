@@ -8,6 +8,13 @@ public class CameraFollow : MonoBehaviour {
     public float smoothSpeed = 0.125f;
 
     public Vector3 offset;
+    public bool setOffsetOnStart;
+
+    void Awake() {
+      if(setOffsetOnStart) {
+        offset = transform.position - target.position;
+      }
+    }
 
     private void FixedUpdate()
     {
