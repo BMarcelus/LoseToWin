@@ -17,6 +17,7 @@ public class Aiming : MonoBehaviour
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.red);
 
+            transform.LookAt(pointToLook);
         }
     }
 }
