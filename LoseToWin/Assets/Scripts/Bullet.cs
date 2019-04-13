@@ -7,9 +7,10 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public float timeToLive;
+    public bool isPlayer;
+
     private float timeRemaining;
     private Rigidbody rb;
-    private 
 
     void Start()
     {
@@ -24,12 +25,17 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            this.gameObject.SetActive(false);
-            timeRemaining = timeToLive;
+            DisableBullet();
         }
     }
     private void FixedUpdate()
     {
         rb.velocity = transform.forward * speed;
+    }
+
+    public void DisableBullet()
+    {
+        this.gameObject.SetActive(false);
+        timeRemaining = timeToLive;
     }
 }
