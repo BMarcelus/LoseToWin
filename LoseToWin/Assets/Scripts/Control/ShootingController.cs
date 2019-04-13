@@ -7,7 +7,6 @@ public class ShootingController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform shotSpawn;
     public float fireRate;
-    public bool isPlayer;
 
     private float nextFire;
 
@@ -28,15 +27,7 @@ public class ShootingController : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject shot = null;
-        if (isPlayer)
-        {
-            shot = ShotPooler.instance.GetPlayerShot();
-        }
-        else
-        {
-            //GameObject shot = ShotPooler.instance.();
-        }
+        GameObject shot = ShotPooler.instance.GetPlayerShot();
 
         if (shot != null)
         {

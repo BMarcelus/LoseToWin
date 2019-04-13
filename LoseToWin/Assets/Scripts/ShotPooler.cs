@@ -67,4 +67,18 @@ public class ShotPooler : MonoBehaviour
         //unable to find available shot
         return null;
     }
+    public GameObject GetEnemyShot()
+    {
+        for (int i = 0; i < enemyShots.Count; i++)
+        {
+            //check if shot is currently not active in the screen
+            if (!enemyShots[i].activeInHierarchy)
+            {
+                return enemyShots[i];
+            }
+        }
+        //Debug.Log("No Shots available");
+        //unable to find available shot
+        return null;
+    }
 }
