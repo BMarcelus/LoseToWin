@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingController : MonoBehaviour
 {
-    public Bullet bulletPrefab;
+    public GameObject bulletPrefab;
     public Transform shotSpawn;
     public float fireRate;
 
@@ -22,8 +22,8 @@ public class ShootingController : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Bullet s = Instantiate(bulletPrefab, shotSpawn.position, shotSpawn.rotation);
-            Destroy(s, 5);
+            GameObject s = Instantiate(bulletPrefab, shotSpawn.position, shotSpawn.rotation);
+            Destroy(s, 2);
         }
     }
 }
