@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameObject player;
+    public static bool playerCanMove = true;
     // Start is called before the first frame update
     void Start()
     {

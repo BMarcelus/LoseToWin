@@ -47,6 +47,7 @@ public class DialogueManager : MonoBehaviour
 
     public void CloseDialogue() {
       showingDialogue = false;
+      // GameManager.playerCanMove = true;
     }
 
     public void ShowDialogue(string t) {
@@ -54,6 +55,7 @@ public class DialogueManager : MonoBehaviour
       showingDialogue = true;
       characterIndex = 0;
       updateDisplayText();
+      // GameManager.playerCanMove = false;
     }
     public string GetDialogue() {
       return displayText;
