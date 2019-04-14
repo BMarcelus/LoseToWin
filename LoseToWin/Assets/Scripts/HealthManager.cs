@@ -6,12 +6,13 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour
 {
     public GameObject ragdoll;
-    public int maximumHealth = 3;
-    private int currentHealth;
+    public float maximumHealth = 3;
+    public float currentHealth;
 
     private void Start()
     {
         currentHealth = maximumHealth;
+
     }
 
     public void reduceHealth()
@@ -37,7 +38,12 @@ public class HealthManager : MonoBehaviour
                 reduceHealth();
                 b.DisableBullet();
             }
-            
         }
+    }
+    //write a function here to get the normalized health
+    public float GetNormalizedHealth()
+    {
+         
+        return currentHealth / maximumHealth;
     }
 }
