@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     void updateDisplayText() {
-      displayText = text.Substring(0,characterIndex);
+      displayText = text.Substring(0,characterIndex) + "<color=#ffffff00>" + text.Substring(characterIndex) + "</color>";
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class EnemyShooter : MonoBehaviour
     public float fireRate;
     public float delay;
 
+    public Animator animator;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +25,7 @@ public class EnemyShooter : MonoBehaviour
             shot.transform.position = this.shotSpawn.position;
             shot.transform.rotation = shotSpawn.rotation;
             shot.SetActive(true);
+            animator.SetBool("Shooting", true);
         }
     }
 }

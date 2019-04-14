@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
+    public GameObject ragdoll;
     public int maximumHealth = 3;
     private int currentHealth;
 
@@ -16,8 +17,10 @@ public class HealthManager : MonoBehaviour
     public void reduceHealth()
     {
         currentHealth--;
-        if (currentHealth == 0)
+        if (currentHealth == 0) {
             Destroy(this.gameObject);
+            Instantiate(ragdoll, transform.position, transform.rotation*ragdoll.transform.rotation);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
