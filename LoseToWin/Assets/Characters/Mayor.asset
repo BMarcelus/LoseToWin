@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: Mayor
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - Hello. I am the mayor. You can tell because of my hat.
+  - I must run the city doing mayor things. I have a very important job.
+  - 

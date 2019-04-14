@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: Generic
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - I just want to feel safe
+  - Life has never been the same since Onederland took over
+  - Hello fellow citizen. I am also a citizen
+  - Pizza time
