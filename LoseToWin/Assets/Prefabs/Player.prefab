@@ -158,7 +158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ragdoll: {fileID: 0}
   maximumHealth: 3
-  currentHealth: 0
+  currentHealth: 3
+  isPlayer: 1
 --- !u!136 &7668167692587475614
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -27,7 +27,9 @@ public class CitizenManager : MonoBehaviour
     public void respawn() {
       GameObject citizen = GetRandomCitizen();
       GameObject model = citizen.GetComponent<Interactable>().model;
-      player.transform.position = citizen.transform.position;
+      Vector3 pos = citizen.transform.position;
+      pos.y=player.transform.position.y;
+      player.transform.position = pos;
       player.transform.rotation = citizen.transform.rotation;
       player.GetComponent<ModelManager>().SetModel(model);
       Destroy(citizen);
