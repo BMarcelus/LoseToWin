@@ -25,8 +25,18 @@ public class ShootingController : MonoBehaviour
         {
             animator.SetBool("Shooting", true);
             nextFire = Time.time + fireRate;
-            GameObject s = Instantiate(bulletPrefab, shotSpawn.position, shotSpawn.rotation);
-            Destroy(s, 2);
+            Shoot();
+        }
+    }
+    void Shoot()
+    {
+        GameObject shot = ShotPooler.instance.GetPlayerShot();
+
+        if (shot != null)
+        {
+            shot.transform.position = this.shotSpawn.position;
+            shot.transform.rotation = shotSpawn.rotation;
+            shot.SetActive(true);
         }
     }
 }

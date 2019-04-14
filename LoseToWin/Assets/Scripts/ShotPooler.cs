@@ -5,11 +5,18 @@ using UnityEngine;
 public class ShotPooler : MonoBehaviour
 {
     //This is what we're pooling
-    public GameObject shotPrefab;
+    public GameObject playerShotPrefab;
+    public GameObject enemyShotPrefab;
+
     //Array that keeps track of what we have in our pool
-    public List<GameObject> shots;
+    public List<GameObject> playerShots;
+
+    public List<GameObject> enemyShots;
+
     //Number of things we want pooled
-    public int amountToPool;
+    public int amountToPoolPlayer;
+
+    public int amountToPoolEnemy;
 
     public static ShotPooler instance;
 
@@ -31,22 +38,43 @@ public class ShotPooler : MonoBehaviour
     void Start()
     {
         //Instantiate pool
-        shots = new List<GameObject>();
-        for (int i = 0; i < amountToPool; i++)
+        playerShots = new List<GameObject>();
+        for (int i = 0; i < amountToPoolPlayer; i++)
         {
-            GameObject shot = (GameObject)Instantiate(shotPrefab);
+            GameObject shot = (GameObject)Instantiate(playerShotPrefab);
             shot.SetActive(false);
-            shots.Add(shot);
+            playerShots.Add(shot);
+        }
+        enemyShots = new List<GameObject>();
+        for (int i = 0; i < amountToPoolEnemy; i++)
+        {
+            GameObject shot = (GameObject)Instantiate(enemyShotPrefab);
+            shot.SetActive(false);
+            enemyShots.Add(shot);
         }
     }
-    public GameObject GetShot()
+    public GameObject GetPlayerShot()
     {
-        for(int i = 0; i < shots.Count; i++)
+        for(int i = 0; i < playerShots.Count; i++)
         {
             //check if shot is currently not active in the screen
-            if (!shots[i].activeInHierarchy)
+            if (!playerShots[i].activeInHierarchy)
             {
-                return shots[i];
+                return playerShots[i];
+            }
+        }
+        //Debug.Log("No Shots available");
+        //unable to find available shot
+        return null;
+    }
+    public GameObject GetEnemyShot()
+    {
+        for (int i = 0; i < enemyShots.Count; i++)
+        {
+            //check if shot is currently not active in the screen
+            if (!enemyShots[i].activeInHierarchy)
+            {
+                return enemyShots[i];
             }
         }
         //Debug.Log("No Shots available");
