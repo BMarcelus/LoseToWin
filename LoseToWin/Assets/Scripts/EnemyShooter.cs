@@ -9,14 +9,15 @@ public class EnemyShooter : MonoBehaviour
     public float fireRate;
     public float delay;
 
-    public Animator animator;
     private GameObject player;
+    public Animator animator;
+    private AudioSource audio;
     // Use this for initialization
     void Start()
     {
-      player = GameManager.player;
+        audio = GetComponentInParent<AudioSource>();
+        player = GameManager.player;
         InvokeRepeating("Fire", delay, fireRate);
-
     }
     void Fire()
     {
@@ -30,6 +31,11 @@ public class EnemyShooter : MonoBehaviour
             shot.transform.rotation = shotSpawn.rotation;
             shot.SetActive(true);
             animator.SetBool("Shooting", true);
+            Sound s = SFXManager.instance.GetSFX("playerShoot");
+            audio.clip = s.clips[0];
+            audio.pitch = Random.Range(s.pitchMin, s.pitchMax);
+            audio.volume = Random.Range(s.volumeMin, s.volumeMax);
+            audio.Play();
         }
     }
 }
