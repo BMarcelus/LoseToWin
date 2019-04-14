@@ -38,4 +38,10 @@ public class Bullet : MonoBehaviour
         this.gameObject.SetActive(false);
         timeRemaining = timeToLive;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(!other.CompareTag("Player") || !other.CompareTag("Enemy"))
+            DisableBullet();
+    }
 }
