@@ -9,17 +9,20 @@ public class EnemyShooter : MonoBehaviour
     public float fireRate;
     public float delay;
 
+    private GameObject player;
     public Animator animator;
     private AudioSource audio;
     // Use this for initialization
     void Start()
     {
         audio = GetComponentInParent<AudioSource>();
+        player = GameManager.player;
         InvokeRepeating("Fire", delay, fireRate);
-
     }
     void Fire()
     {
+      Vector3 diff = player.transform.position - transform.position;
+      if(diff.magnitude>30)return;
         GameObject shot = ShotPooler.instance.GetEnemyShot();
 
         if (shot != null)

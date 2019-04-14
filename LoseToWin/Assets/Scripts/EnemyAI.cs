@@ -10,16 +10,18 @@ public class EnemyAI : MonoBehaviour
     private int destPoint = 0;
     private NavMeshAgent agent;
 
+    private GameObject player;
+
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        player = GameManager.player;
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
         // approaches a destination point).
         agent.autoBraking = false;
-        points.Add(new Vector3(20, 0, 50));
+        points.Add(new Vector3(0, 0, 0));
 
         GotoNextPoint();
     }
@@ -44,6 +46,12 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+      Vector3 diff = player.transform.position-transform.position;
+      if(diff.magnitude<30) {
+        diff.y=0;
+        Quaternion look = Quaternion.LookRotation(diff);
+        transform.rotation = Quaternion.Lerp(transform.rotation, look, 0.05f);
+      }
         if (!agent.isOnNavMesh)
             return;
         // Choose the next destination point when the agent gets

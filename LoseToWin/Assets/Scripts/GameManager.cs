@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateScore()
     {
-        score++;
+        score+=10;
         points.UpdatePointText();
     }
 }

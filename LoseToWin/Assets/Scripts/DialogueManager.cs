@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     public string displayText;
     public bool showingDialogue = false;
     private int characterIndex = 0;
-    public float talkSpeed = .1f;
+    public float talkSpeed;
     private float talkTimer = 0;
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,8 @@ public class DialogueManager : MonoBehaviour
           if(crawling) {
             if(talkTimer>0) {
               talkTimer -= Time.deltaTime;
-            } else {
+            }
+            if(talkTimer<=0) {
               talkTimer = talkSpeed;
               characterIndex += 1;
               updateDisplayText();

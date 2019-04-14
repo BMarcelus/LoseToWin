@@ -8,6 +8,7 @@ public class Interactable : MonoBehaviour
     public GameObject model;
     private DialogueManager dialogueManager;
     private Quaternion targetAngle;
+    public bool facesPlayer = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class Interactable : MonoBehaviour
       if(col.tag == "Player") {
         string text = dialogue.GetRandom();
         dialogueManager.ShowDialogue(text);
+        if(facesPlayer)
         targetAngle = Quaternion.LookRotation(col.transform.position-transform.position, Vector3.up);
       }
     }
