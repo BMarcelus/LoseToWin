@@ -23,14 +23,14 @@ public class ShotPooler : MonoBehaviour
     private void Awake()
     {
         //Start singleton creation
-        if (instance == null)
+        // if (instance == null)
             instance = this;
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);
+        // else
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
+        // DontDestroyOnLoad(gameObject);
         //End singleton creation
     }
 

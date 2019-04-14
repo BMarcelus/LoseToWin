@@ -6,7 +6,13 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
   public string[] texts;
+  private int index = 0;
+
   public string GetRandom() {
-    return texts[Random.Range(0,texts.Length)];
+    string text = texts[index];
+    index++;
+    if(index>=texts.Length)index=0;
+    return text;
+    // return texts[Random.Range(0,texts.Length)];
   }
 }
