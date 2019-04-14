@@ -35,7 +35,10 @@ public class ShootingController : MonoBehaviour
         if (shot != null)
         {
             shot.transform.position = this.shotSpawn.position;
-            shot.transform.rotation = shotSpawn.rotation;
+            Vector3 eulerAngles = shotSpawn.rotation.eulerAngles;
+            eulerAngles.x=0;
+            eulerAngles.z=0;
+            shot.transform.rotation = Quaternion.Euler(eulerAngles);
             shot.SetActive(true);
         }
     }
