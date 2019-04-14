@@ -26,4 +26,9 @@ public class Interactable : MonoBehaviour
         targetAngle = Quaternion.LookRotation(col.transform.position-transform.position, Vector3.up);
       }
     }
+    void OnTriggerExit(Collider col) {
+      if(col.tag == "Player") {
+        dialogueManager.CloseDialogue();
+      }
+    }
 }
