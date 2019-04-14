@@ -24,8 +24,7 @@ public class HealthManager : MonoBehaviour
         if(other.gameObject.GetComponent<Bullet>() != null)
         {
             Bullet b = other.gameObject.GetComponent<Bullet>();
-            //if player's bullet and not the player
-            if (b.isPlayer && !this.CompareTag("Player"))
+            if (b.isPlayer && this.CompareTag("Enemy"))
             {
                 reduceHealth();
                 b.DisableBullet();
