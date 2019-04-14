@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 7668167692587475614}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f784e6f28037d048bd66b2e59ca9f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ragdoll: {fileID: 0}
   maximumHealth: 3
   currentHealth: 0
 --- !u!136 &7668167692587475614
