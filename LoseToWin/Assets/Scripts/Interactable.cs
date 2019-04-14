@@ -5,6 +5,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public Dialogue dialogue;
+    public GameObject model;
     private DialogueManager dialogueManager;
     private Quaternion targetAngle;
     // Start is called before the first frame update
