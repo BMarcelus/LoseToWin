@@ -31,7 +31,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 Transform spawnLoc = spawnLocs[Random.Range(0, spawnLocs.Length)];
                 //ensure correct y
-                spawnLoc.position.Set(spawnLoc.position.x, -5.2f, spawnLoc.position.z);
+                spawnLoc.position.Set(spawnLoc.position.x, spawnLoc.position.y, spawnLoc.position.z);
                 Instantiate(enemyPrefab, spawnLoc.position, spawnLoc.rotation);
                 yield return new WaitForSeconds(spawnRate);
             }
