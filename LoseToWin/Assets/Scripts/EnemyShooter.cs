@@ -10,9 +10,11 @@ public class EnemyShooter : MonoBehaviour
     public float delay;
 
     public Animator animator;
+    private AudioSource audio;
     // Use this for initialization
     void Start()
     {
+        audio = GetComponentInParent<AudioSource>();
         InvokeRepeating("Fire", delay, fireRate);
 
     }
@@ -26,6 +28,11 @@ public class EnemyShooter : MonoBehaviour
             shot.transform.rotation = shotSpawn.rotation;
             shot.SetActive(true);
             animator.SetBool("Shooting", true);
+            Sound s = SFXManager.instance.GetSFX("playerShoot");
+            audio.clip = s.clips[0];
+            audio.pitch = Random.Range(s.pitchMin, s.pitchMax);
+            audio.volume = Random.Range(s.volumeMin, s.volumeMax);
+            audio.Play();
         }
     }
 }

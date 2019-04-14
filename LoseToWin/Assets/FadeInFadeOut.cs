@@ -16,6 +16,7 @@ public class FadeInFadeOut : MonoBehaviour
     {
         canvasGroup = GetComponent<CanvasGroup>();
         StartCoroutine(FIFO());
+        SFXManager.instance.Play("MainTheme");
     }
 
     private IEnumerator FIFO()

@@ -43,4 +43,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3967f268bf8e88745a3122efb724090e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffects: []
+  soundEffects:
+  - name: MainTheme
+    clips:
+    - {fileID: 8300000, guid: d8d853ddeb9ca324eb4169a6a5995f95, type: 3}
+    pitch: 1
+    volume: 1
+    loop: 1
+    pitchMin: 0
+    pitchMax: 0
+    volumeMin: 0
+    volumeMax: 0
+    source: {fileID: 0}
+  - name: playerShoot
+    clips:
+    - {fileID: 8300000, guid: b1c0590acc1b77c42875cee98972b27d, type: 3}
+    pitch: 1
+    volume: 1
+    loop: 0
+    pitchMin: 0.75
+    pitchMax: 1.5
+    volumeMin: 0.55
+    volumeMax: 0.75
+    source: {fileID: 0}
+  - name: enemyShoot
+    clips:
+    - {fileID: 8300000, guid: 0d4d8c1f2c452ed4a9a6bb2875afbeb2, type: 3}
+    pitch: 1
+    volume: 1
+    loop: 0
+    pitchMin: 0.75
+    pitchMax: 1.5
+    volumeMin: 0.45
+    volumeMax: 0.55
+    source: {fileID: 0}
