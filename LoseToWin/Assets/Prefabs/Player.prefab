@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 1853876208}
   - component: {fileID: 2887449295114629546}
   - component: {fileID: 7668167692587475614}
+  - component: {fileID: 4157753968741151207}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -172,6 +173,19 @@ CapsuleCollider:
   m_Height: 5.25
   m_Direction: 1
   m_Center: {x: 0, y: 2.75, z: 0}
+--- !u!114 &4157753968741151207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101952881399493885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 312f3864311034d74b0e716485936caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  model: {fileID: 313975610104289963}
 --- !u!1 &2290282269928858221
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +354,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3cb9c6806d13bb49a3f3d7c217d0005, type: 3}
+--- !u!1 &313975610104289963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1249919517312644848, guid: c3cb9c6806d13bb49a3f3d7c217d0005,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514313431167560795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &313975610103858827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1249919517312215760, guid: c3cb9c6806d13bb49a3f3d7c217d0005,

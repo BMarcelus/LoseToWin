@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
-  m_Name: Generic
+  m_Name: Rebellion
   m_EditorClassIdentifier: 
   texts:
-  - I just want to feel safe. There is not safty in here anymore.
-  - Life has never been the same since Onederland took over
-  - Hello fellow citizen. I just want to live my life in here.
-  - Pizza time~ Anyone wants pizza?
+  - AHHHHHHH
+  - ah
