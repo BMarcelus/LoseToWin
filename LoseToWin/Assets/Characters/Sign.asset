@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: Sign
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - 'Message from Onederland: Resistence Is Futile'
+  - 'Message from Onederland: Fighting your benevelent overlords will result in Death'
+  - 'Message from Onederland: Do not fight the system. You will Lose.'
