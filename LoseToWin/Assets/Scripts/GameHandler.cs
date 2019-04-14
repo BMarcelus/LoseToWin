@@ -9,6 +9,5 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
     healthBar.SetSize(.4f);
-
     }
 }
