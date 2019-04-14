@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1531576206}
   - component: {fileID: 1531576209}
   - component: {fileID: 1531576208}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2023945723}
   - component: {fileID: 2042727024}
   - component: {fileID: 4759299841681166541}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,6 @@ MonoBehaviour:
     type: 3}
   shotSpawn: {fileID: 5445382713715832051}
   fireRate: 0.25
-  isPlayer: 1
 --- !u!1 &1101952881399493885
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +154,8 @@ GameObject:
   - component: {fileID: 1217352029798374012}
   - component: {fileID: 1217352029798374000}
   - component: {fileID: 1853876208}
-  m_Layer: 0
+  - component: {fileID: 4101325207567616984}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fcd4e2f869564a0da9f2e48920fec5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
 --- !u!135 &1217352029798374012
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -276,6 +276,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97e31ff79ec8b3419d99657985e954c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4101325207567616984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101952881399493885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f784e6f28037d048bd66b2e59ca9f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumHealth: 3
 --- !u!1 &2290282269928858221
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5445382713715832051}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

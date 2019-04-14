@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7392344173552024190}
   - component: {fileID: 544468607}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 7392344174090268683}
   - component: {fileID: 7392344174090268692}
   - component: {fileID: 7392344174090268693}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gun Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 8534891823765018105}
   - component: {fileID: 8534891823765018101}
   - component: {fileID: 6081156033542684973}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3244565794713533302}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
