@@ -77,6 +77,11 @@ PrefabInstance:
       propertyPath: isPlayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6601114578735748675, guid: 64f5c762d4649b5408b0e0e39f71fe13,
+        type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4801900921379365134, guid: 64f5c762d4649b5408b0e0e39f71fe13,
         type: 3}
       propertyPath: m_Parameters.colorGradient.key0.r

@@ -10,14 +10,18 @@ public class EnemyShooter : MonoBehaviour
     public float delay;
 
     public Animator animator;
+    private GameObject player;
     // Use this for initialization
     void Start()
     {
+      player = GameManager.player;
         InvokeRepeating("Fire", delay, fireRate);
 
     }
     void Fire()
     {
+      Vector3 diff = player.transform.position - transform.position;
+      if(diff.magnitude>30)return;
         GameObject shot = ShotPooler.instance.GetEnemyShot();
 
         if (shot != null)

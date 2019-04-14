@@ -310,7 +310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 3452477020084976647, guid: 50308c9bef894b64791b029a08fcc990, type: 3}
   shotSpawn: {fileID: 3244565794713533302}
-  fireRate: 0.25
+  fireRate: 0.4
   delay: 0.25
   animator: {fileID: 5475133280669616858}
 --- !u!1 &7392344174090268680
@@ -457,7 +457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ragdoll: {fileID: 7424268040107969567, guid: 8d1ce30ab5370415eb1290cdcdcbff4a, type: 3}
   maximumHealth: 3
-  currentHealth: 0
+  currentHealth: 3
+  isPlayer: 0
 --- !u!195 &3764233459240457401
 NavMeshAgent:
   m_ObjectHideFlags: 0

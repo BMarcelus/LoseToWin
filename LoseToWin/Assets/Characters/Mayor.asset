@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texts:
   - Hello. I am the mayor. You can tell because of my hat.
-  - I must run the city doing mayor things. People's life are counting on me.
-  - The city once was a glamorous gate of the Onedeland, but now it falled into ruins.
+  - I must run the city doing mayor things. People's lives are counting on me.
+  - The city once was a glamorous gate of the Onedeland, but now it has fallen into
+    ruins.

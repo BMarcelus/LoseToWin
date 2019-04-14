@@ -6,6 +6,8 @@ public class CitizenManager : MonoBehaviour
 {
     public GameObject player;
     private HealthManager health;
+    private bool dying = false;
+    private DialogueManager dialogueManager;
     /*
     A citizen has
       a gameobject in the world
@@ -22,6 +24,17 @@ public class CitizenManager : MonoBehaviour
     {
       player = GameObject.Find("Player");
       health = player.GetComponent<HealthManager>();
+      dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
+    }
+
+    IEnumerator Respawn() {
+      player.SetActive(false);
+      yield return new WaitForSeconds(0.1f);
+      dialogueManager.ShowDialogue("You are dead. But the fight continues");
+      yield return new WaitForSeconds(1);
+      player.SetActive(true);
+      respawn();      
+      dying = false;
     }
 
     public void respawn() {
@@ -44,8 +57,9 @@ public class CitizenManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(health.currentHealth<=0) {
-        respawn();
+      if(health.currentHealth<=0 && !dying) {
+        dying = true;
+        StartCoroutine(Respawn());
       }
     }
 }
