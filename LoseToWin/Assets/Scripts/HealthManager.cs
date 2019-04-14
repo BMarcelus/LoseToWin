@@ -8,6 +8,7 @@ public class HealthManager : MonoBehaviour
     public GameObject ragdoll;
     public float maximumHealth = 3;
     public float currentHealth;
+    public bool isPlayer = false;
 
     private void Start()
     {
@@ -18,11 +19,12 @@ public class HealthManager : MonoBehaviour
     public void reduceHealth()
     {
         currentHealth--;
-        if (currentHealth == 0) {
+        if (currentHealth == 0 && !isPlayer) {
             Destroy(this.gameObject);
             Instantiate(ragdoll, transform.position, transform.rotation*ragdoll.transform.rotation);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.GetComponent<Bullet>() != null)
