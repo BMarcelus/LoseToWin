@@ -9,6 +9,7 @@ public class ShootingController : MonoBehaviour
     public float fireRate;
 
     private float nextFire;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,8 +20,10 @@ public class ShootingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(!GameManager.playerCanMove)return;
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
+            animator.SetBool("Shooting", true);
             nextFire = Time.time + fireRate;
             Shoot();
         }
@@ -32,7 +35,10 @@ public class ShootingController : MonoBehaviour
         if (shot != null)
         {
             shot.transform.position = this.shotSpawn.position;
-            shot.transform.rotation = shotSpawn.rotation;
+            Vector3 eulerAngles = shotSpawn.rotation.eulerAngles;
+            eulerAngles.x=0;
+            eulerAngles.z=0;
+            shot.transform.rotation = Quaternion.Euler(eulerAngles);
             shot.SetActive(true);
         }
     }

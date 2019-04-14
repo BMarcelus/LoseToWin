@@ -35,7 +35,14 @@ public class Bullet : MonoBehaviour
 
     public void DisableBullet()
     {
+        GetComponent<TrailRenderer>().Clear();
         this.gameObject.SetActive(false);
         timeRemaining = timeToLive;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(!other.CompareTag("Player") && !other.CompareTag("Enemy"))
+            DisableBullet();
     }
 }

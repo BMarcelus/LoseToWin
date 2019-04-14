@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
     public string displayText;
     public bool showingDialogue = false;
     private int characterIndex = 0;
-    private float talkSpeed = .1f;
+    public float talkSpeed = .1f;
     private float talkTimer = 0;
     // Start is called before the first frame update
     void Start()
@@ -47,13 +47,16 @@ public class DialogueManager : MonoBehaviour
 
     public void CloseDialogue() {
       showingDialogue = false;
+      // GameManager.playerCanMove = true;
     }
 
     public void ShowDialogue(string t) {
+      if(showingDialogue)return;
       text = t;
       showingDialogue = true;
       characterIndex = 0;
       updateDisplayText();
+      // GameManager.playerCanMove = false;
     }
     public string GetDialogue() {
       return displayText;
