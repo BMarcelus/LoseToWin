@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CitizenManager : MonoBehaviour
 {
@@ -50,7 +51,6 @@ public class CitizenManager : MonoBehaviour
     }
 
     public GameObject GetRandomCitizen() {
-      Debug.Log(transform.childCount);
       return transform.GetChild(Random.Range(0,transform.childCount)).gameObject;
     }
 
@@ -59,7 +59,21 @@ public class CitizenManager : MonoBehaviour
     {
       if(health.currentHealth<=0 && !dying) {
         dying = true;
-        StartCoroutine(Respawn());
+        if(transform.childCount==0) {
+          StartCoroutine(GameOver());
+        } else {
+          StartCoroutine(Respawn());
+        }
       }
+    }
+
+    IEnumerator GameOver() {
+      player.SetActive(false);
+      yield return new WaitForSeconds(1f);
+      dialogueManager.ShowDialogue("Every citizen has died. You have lost. Word of your revolution has reached across the world. Society moves towards positive change. You have won");
+      while(dialogueManager.showingDialogue) {
+        yield return new WaitForFixedUpdate();
+      }
+      SceneManager.LoadScene("BeginningScene");
     }
 }
