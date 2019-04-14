@@ -45,8 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerShotPrefab: {fileID: 424953940056892360, guid: 64f5c762d4649b5408b0e0e39f71fe13,
     type: 3}
-  enemyShotPrefab: {fileID: 0}
+  enemyShotPrefab: {fileID: 3452477020084976647, guid: 50308c9bef894b64791b029a08fcc990,
+    type: 3}
   playerShots: []
   enemyShots: []
   amountToPoolPlayer: 9
-  amountToPoolEnemy: 0
+  amountToPoolEnemy: 9

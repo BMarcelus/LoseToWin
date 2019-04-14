@@ -26,6 +26,8 @@ public class EnemyAI : MonoBehaviour
 
     void GotoNextPoint()
     {
+        if (!agent.isOnNavMesh)
+            return;
         // Returns if no points have been set up
         if (points.Length == 0)
             return;
@@ -41,6 +43,8 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        if (!agent.isOnNavMesh)
+            return;
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
