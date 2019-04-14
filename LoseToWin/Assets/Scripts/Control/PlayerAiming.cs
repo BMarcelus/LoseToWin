@@ -7,6 +7,7 @@ public class PlayerAiming : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(!GameManager.playerCanMove)return;
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, transform.position);
         float rayLength;

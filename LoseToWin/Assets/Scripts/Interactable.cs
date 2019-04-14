@@ -19,6 +19,8 @@ public class Interactable : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-      dialogueManager.ShowDialogue(text);
+      if(col.tag == "Player") {
+        dialogueManager.ShowDialogue(text);
+      }
     }
 }
