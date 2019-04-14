@@ -20,6 +20,8 @@ public class HealthManager : MonoBehaviour
         currentHealth--;
         if (currentHealth == 0) {
             Destroy(this.gameObject);
+            if (CompareTag("Enemy"))
+                GameManager.instance.UpdateScore();
             Instantiate(ragdoll, transform.position, transform.rotation*ragdoll.transform.rotation);
         }
     }
