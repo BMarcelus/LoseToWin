@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    public string text;
+    public Dialogue dialogue;
     private DialogueManager dialogueManager;
     private Quaternion targetAngle;
     // Start is called before the first frame update
@@ -22,8 +22,14 @@ public class Interactable : MonoBehaviour
 
     void OnTriggerEnter(Collider col) {
       if(col.tag == "Player") {
+        string text = dialogue.GetRandom();
         dialogueManager.ShowDialogue(text);
         targetAngle = Quaternion.LookRotation(col.transform.position-transform.position, Vector3.up);
+      }
+    }
+    void OnTriggerExit(Collider col) {
+      if(col.tag == "Player") {
+        dialogueManager.CloseDialogue();
       }
     }
 }

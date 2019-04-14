@@ -5,19 +5,23 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    public int maximumHealth = 3;
-    public int currentHealth;
+    public GameObject ragdoll;
+    public float maximumHealth = 3;
+    public float currentHealth;
 
     private void Start()
     {
         currentHealth = maximumHealth;
+
     }
 
     public void reduceHealth()
     {
         currentHealth--;
-        if (currentHealth == 0)
+        if (currentHealth == 0) {
             Destroy(this.gameObject);
+            Instantiate(ragdoll, transform.position, transform.rotation*ragdoll.transform.rotation);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -34,7 +38,12 @@ public class HealthManager : MonoBehaviour
                 reduceHealth();
                 b.DisableBullet();
             }
-            
         }
+    }
+    //write a function here to get the normalized health
+    public float GetNormalizedHealth()
+    {
+
+        return currentHealth / maximumHealth;
     }
 }
