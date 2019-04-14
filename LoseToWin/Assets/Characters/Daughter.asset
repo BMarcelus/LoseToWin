@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: Daughter
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - 'People will never voluntarily to lay down arms in a country where bearing them
+    is considered a matter of honour. '
+  - Why they cannot learn? The will of people will deafeat the evil of truining our
+    freedom! We will triumph at the end!
+  - If the Onedeland take over the city, the history will revenage by the will of
+    the people.
