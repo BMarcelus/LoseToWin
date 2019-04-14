@@ -48,14 +48,14 @@ public class PlayerAiming : MonoBehaviour
                 if (!string.IsNullOrEmpty(temp[i]))
                 {
                     //Not empty, controller temp[i] is connected
-                    Debug.Log("Controller " + i + " is connected using: " + temp[i]);
+                    //Debug.Log("Controller " + i + " is connected using: " + temp[i]);
                     return true;
                 }
                 else
                 {
                     //If it is empty, controller i is disconnected
                     //where i indicates the controller number
-                    Debug.Log("Controller: " + i + " is disconnected.");
+                    //Debug.Log("Controller: " + i + " is disconnected.");
                     return false;
 
                 }
