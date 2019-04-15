@@ -63,12 +63,35 @@ MonoBehaviour:
     loop: 0
     pitchMin: 0.75
     pitchMax: 1.5
-    volumeMin: 0.55
-    volumeMax: 0.75
+    volumeMin: 0.326
+    volumeMax: 0.444
     source: {fileID: 0}
   - name: enemyShoot
     clips:
     - {fileID: 8300000, guid: 0d4d8c1f2c452ed4a9a6bb2875afbeb2, type: 3}
+    pitch: 1
+    volume: 1
+    loop: 0
+    pitchMin: 0.75
+    pitchMax: 1.5
+    volumeMin: 0.139
+    volumeMax: 0.24
+    source: {fileID: 0}
+  - name: enemyHurt
+    clips:
+    - {fileID: 8300000, guid: cd51b0fb34e1ee343b1d0ff8b225eb53, type: 3}
+    - {fileID: 8300000, guid: 3358d6bc997f0154fb4eeafe7458cb92, type: 3}
+    pitch: 1
+    volume: 1
+    loop: 0
+    pitchMin: 0.75
+    pitchMax: 1.5
+    volumeMin: 0.677
+    volumeMax: 0.862
+    source: {fileID: 0}
+  - name: playerHurt
+    clips:
+    - {fileID: 8300000, guid: 33a3362de900f8c428f4199121702766, type: 3}
     pitch: 1
     volume: 1
     loop: 0
