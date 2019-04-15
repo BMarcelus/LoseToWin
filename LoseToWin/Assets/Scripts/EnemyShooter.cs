@@ -31,7 +31,7 @@ public class EnemyShooter : MonoBehaviour
             shot.transform.rotation = shotSpawn.rotation;
             shot.SetActive(true);
             animator.SetBool("Shooting", true);
-            Sound s = SFXManager.instance.GetSFX("playerShoot");
+            Sound s = SFXManager.instance.GetSFX("enemyShoot");
             audio.clip = s.clips[0];
             audio.pitch = Random.Range(s.pitchMin, s.pitchMax);
             audio.volume = Random.Range(s.volumeMin, s.volumeMax);

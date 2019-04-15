@@ -7,15 +7,18 @@ public class ShootingController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform shotSpawn;
     public float fireRate;
+    public float shakeDur;
 
     private float nextFire;
     public Animator animator;
     private AudioSource audio;
+    private CameraFollow shake;
 
     // Start is called before the first frame update
     void Start()
     {
         audio = GetComponentInParent<AudioSource>();
+        shake = GameObject.Find("Main Camera").GetComponent<CameraFollow>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class ShootingController : MonoBehaviour
             audio.pitch = Random.Range(s.pitchMin, s.pitchMax);
             audio.volume = Random.Range(s.volumeMin, s.volumeMax);
             audio.Play();
+            shake.shakeDuration = shakeDur;
         }
     }
     void Shoot()
