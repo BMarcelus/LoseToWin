@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -426,6 +426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.125
+  shakeDuration: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
   offset: {x: 0, y: 0, z: 0}
   setOffsetOnStart: 0
 --- !u!1 &539616132
@@ -537,6 +540,7 @@ MonoBehaviour:
   maximumHealth: 3
   currentHealth: 3
   isPlayer: 0
+  shakeDur: 0
 --- !u!1001 &648389355
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -761,6 +765,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseButton: {fileID: 995073995}
   pausePanel: {fileID: 218178652}
+--- !u!114 &769538338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769538332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d84532f88f5ee48b5bc6e25e8c2953e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &844439514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1775,7 +1791,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838354813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 769538338}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1838354813
@@ -2289,11 +2316,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8809096603933424890, guid: 3dccd325f49be46ed89d3ec184245fab,
-        type: 3}
-      propertyPath: healthManager
-      value: 
-      objectReference: {fileID: 546641851}
     - target: {fileID: 8809096603933424888, guid: 3dccd325f49be46ed89d3ec184245fab,
         type: 3}
       propertyPath: m_UiScaleMode
@@ -2304,5 +2326,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: b5dde3bbab842403ba36c17580332f2f,
         type: 3}
+    - target: {fileID: 8809096603933424890, guid: 3dccd325f49be46ed89d3ec184245fab,
+        type: 3}
+      propertyPath: healthManager
+      value: 
+      objectReference: {fileID: 546641851}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dccd325f49be46ed89d3ec184245fab, type: 3}
