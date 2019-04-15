@@ -18,5 +18,6 @@ public class FadeOut : MonoBehaviour
     {
         // start fading
         yield return StartCoroutine(FadeInFadeOut.FadeCanvas(canvasGroup, 1f, 0f, fadeOutRate));
+        gameObject.SetActive(false);
     }
 }
