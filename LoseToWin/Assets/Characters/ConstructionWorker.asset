@@ -12,4 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: ConstructionWorker
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - I am a construction worker
+  - I do the construction
+  - I wear the yellow vest for visibility. So that people can see that I am working
+    in construction.
+  - I hold this hexagonal sign to remind people that it is illegal to steal real stop
+    signs.
+  - 'Sometimes I think about what it would be like to make a better world. '
+  - I guess you could say this revolution has been pretty... built up.

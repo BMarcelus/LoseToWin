@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
   m_Name: Lazy
   m_EditorClassIdentifier: 
-  texts: []
+  texts:
+  - '...'
+  - Do you ever just wanna lie on the floor?
+  - '...'
+  - One day. maybe things will be better.
+  - That cloud looks like a bird. huh. How nice it must be to be free to fly wherever
+    you want.
+  - by the way. do you like bagels?
+  - I know this pretty cool bagel place, but the bread makers got hit pretty hard
+    by the bread act of 2043

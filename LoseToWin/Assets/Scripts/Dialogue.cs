@@ -15,4 +15,8 @@ public class Dialogue : ScriptableObject
     return text;
     // return texts[Random.Range(0,texts.Length)];
   }
+
+  public string GetIndex(int index) {
+    return texts[index % texts.Length];
+  }
 }
