@@ -33,6 +33,7 @@ public class EnemySpawner : MonoBehaviour
                 //ensure correct y
                 spawnLoc.position.Set(spawnLoc.position.x, spawnLoc.position.y, spawnLoc.position.z);
                 Instantiate(enemyPrefab, spawnLoc.position, spawnLoc.rotation);
+                if(spawnRate>1)spawnRate *= 0.98f;
                 yield return new WaitForSeconds(spawnRate);
             }
         }

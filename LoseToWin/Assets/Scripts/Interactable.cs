@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     private DialogueManager dialogueManager;
     private Quaternion targetAngle;
     public bool facesPlayer = true;
+    private int index = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,8 @@ public class Interactable : MonoBehaviour
 
     void OnTriggerEnter(Collider col) {
       if(col.tag == "Player") {
-        string text = dialogue.GetRandom();
+        string text = dialogue.GetIndex(index);
+        index += 1;
         dialogueManager.ShowDialogue(text);
         if(facesPlayer)
         targetAngle = Quaternion.LookRotation(col.transform.position-transform.position, Vector3.up);

@@ -9,6 +9,7 @@ public class CitizenManager : MonoBehaviour
     private HealthManager health;
     private bool dying = false;
     private DialogueManager dialogueManager;
+    private GameManager gm;
     /*
     A citizen has
       a gameobject in the world
@@ -26,6 +27,7 @@ public class CitizenManager : MonoBehaviour
       player = GameObject.Find("Player");
       health = player.GetComponent<HealthManager>();
       dialogueManager = GameObject.FindObjectOfType<DialogueManager>();
+      gm = GameObject.FindObjectOfType<GameManager>();
     }
 
     IEnumerator Respawn() {
@@ -70,7 +72,11 @@ public class CitizenManager : MonoBehaviour
     IEnumerator GameOver() {
       player.SetActive(false);
       yield return new WaitForSeconds(1f);
-      dialogueManager.ShowDialogue("Every citizen has died. You have lost. Word of your revolution has reached across the world. Society moves towards positive change. You have won");
+      if(gm.score > 500) {
+        dialogueManager.ShowDialogue("Every citizen has died. You have lost. You scored "+gm.score+ " revolution points. You fought well. Word of your revolution has reached across the world. Society must act after your display of deffiance. The world moves toward positive change. You have won");
+      } else {
+        dialogueManager.ShowDialogue("Every citizen has died. You have lost. You scored "+gm.score+ " revolution points. You put up a small fight. Perhaps word of your cause will reach other towns...");
+      }
       while(dialogueManager.showingDialogue) {
         yield return new WaitForFixedUpdate();
       }

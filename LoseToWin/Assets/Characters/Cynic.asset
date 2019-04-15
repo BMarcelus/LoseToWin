@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
-  m_Name: Rebellion
+  m_Name: Cynic
   m_EditorClassIdentifier: 
   texts:
-  - If you give me a gun, I wll kick them out of my city.
-  - People will not sit and wait but fight and die!
-  - 'For you and me, for the city, I shall fight to the last minute! '
+  - Idiots fighting. Everyone knows the Onederland will kill anyone who fights. They
+    will lose for sure.
+  - Hmph. I'll take care of my own life thanks
+  - Onederland gives us enough to live off. Thats enough for me. All societies have
+    their issues. I'd rather not waste time worrying about it.

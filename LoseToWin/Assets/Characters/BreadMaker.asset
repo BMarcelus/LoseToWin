@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
-  m_Name: Rebellion
+  m_Name: BreadMaker
   m_EditorClassIdentifier: 
   texts:
-  - If you give me a gun, I wll kick them out of my city.
-  - People will not sit and wait but fight and die!
-  - 'For you and me, for the city, I shall fight to the last minute! '
+  - I am the bread maker. I make bread for the people. and for Onederland
+  - My bread goes to Onederland to feed the whole as one. Thankfully they leave me
+    with one loaf a week for my family.
+  - Man, I sure love bread.
+  - Why, if Onederland would let me, I'd eat bread every day! Hohoho

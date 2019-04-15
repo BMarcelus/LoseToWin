@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 117308fac2e304044a3a7e07f9b321d0, type: 3}
-  m_Name: Rebellion
+  m_Name: Lazy
   m_EditorClassIdentifier: 
   texts:
-  - If you give me a gun, I wll kick them out of my city.
-  - People will not sit and wait but fight and die!
-  - 'For you and me, for the city, I shall fight to the last minute! '
+  - '...'
+  - Do you ever just wanna lie on the floor?
+  - '...'
+  - One day. maybe things will be better.
+  - That cloud looks like a bird. huh. How nice it must be to be free to fly wherever
+    you want.
+  - by the way. do you like bagels?
+  - I know this pretty cool bagel place, but the bread makers got hit pretty hard
+    by the bread act of 2043
